@@ -1,0 +1,6 @@
+Source code for Better URL Bar addon. In addition, ../scripts/helpers.js 
+and ../scripts/utils.js are also needed before packing this addon.
+
+AMO link: https://addons.mozilla.org/en-US/firefox/addon/better-url/
+Short Description: Makes the URL bar and Search bar fonts bigger and more
+			readable.

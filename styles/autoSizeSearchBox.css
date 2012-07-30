@@ -3,58 +3,58 @@
 /* Modified from style "Search bar - Auto-size" by banthaz */
 
 #search-container .searchbar-textbox {
-  min-width: 60px !important;
-  overflow: hidden !important;
-  -moz-transition: min-width 100ms 100ms ease-out !important;
+	min-width: 60px !important;
+	overflow: hidden !important;
+	-moz-transition: min-width 100ms 100ms ease-out !important;
 }
 
 #search-container:hover .searchbar-textbox,
 #search-container .searchbar-textbox[focused] {
-  min-width: 250px !important;
+	min-width: 250px !important;
 }
 
 #search-container:hover .searchbar-textbox {
-  -moz-transition-delay: 300ms !important;
+	-moz-transition-delay: 300ms !important;
 }
 
 #search-container .searchbar-textbox[focused] {
-  -moz-transition: none !important;
+	-moz-transition: none !important;
 }
 
 #navigator-toolbox:not([customizing]) #search-container {
-  max-width: 0 !important;
+	max-width: 0 !important;
 }
 
 #urlbar-search-splitter {
-  display: none !important;
+	display: none !important;
 }
 
 /* Modified from style ¦¦¦¦Unified Url+Search bar [hover Splitter]¦¦¦¦ v1.5 by frog*/
 
 #nav-bar #urlbar {
-  margin-right: 0 !important;
-  border-top-right-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
+	margin-right: 0 !important;
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
 }
 
 #nav-bar #urlbar-search-splitter:not(:hover) + #search-container .searchbar-textbox {
-  margin-left: 0 !important;
-  border-top-left-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
-  border-left-width: 0 !important;
+	margin-left: 0 !important;
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	border-left-width: 0 !important;
 }
 
 /* Style "Auto-hide Search Engine Button" by sdrocking */
 
 #search-container .searchbar-engine-button {
-  margin-left: 0 !important;
-  -moz-transition: margin 100ms !important;
+	margin-left: 0 !important;
+	-moz-transition: margin 100ms !important;
 }
 
 #navigator-toolbox:not([customizing]) #search-container:not(:hover) .searchbar-textbox:not([focused]) .searchbar-engine-button {
-  margin-left: -32px !important;
+	margin-left: -32px !important;
 }
 
 #search-container:hover .searchbar-engine-button {
-  -moz-transition-delay: 300ms !important;
+	-moz-transition-delay: 300ms !important;
 }

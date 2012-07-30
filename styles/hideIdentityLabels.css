@@ -1,3 +1,0 @@
-#navigator-toolbox:not([customizing]) #identity-box.verifiedDomain:not(:hover) #identity-icon-labels {
-  visibility: collapse !important;
-}

@@ -31,12 +31,12 @@ function setURLBarFormattingPref() {
 
   unload(function() {
     Services.prefs.setBoolPref(URLBAR_FORMATTING_PREF, domainHighlight_o);
-  })
+  });
 }
 
 function startup(data, reason) {
+  initAddonNameAsync(data);
   loadAndObserve("increaseFonts", "styles/increaseFonts.css");
-  loadAndObserve("hideIdentityLabels", "styles/hideIdentityLabels.css");
   loadAndObserve("autoSizeSearchBox", "styles/autoSizeSearchBox.css");
   setURLBarFormattingPref();
 }

@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <box xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-  <setting pref="extensions.better_url.increaseFonts" type="bool" title="Increase font size for the URL bar and the Search box" />
+	<setting pref="extensions.better_url.increaseFonts" type="bool"
+		title="Increase font size for the URL bar and the Search box" />
 
-  <setting pref="extensions.better_url.hideIdentityLabels" type="bool" title="Remove redundant labels from the identity box">
-    Hides labels like 'google.com' and 'facebook.com'
-  </setting>
+	<setting pref="extensions.better_url.autoSizeSearchBox" type="bool"
+		title="Automatically collapse search box when inactive" />
 
-  <setting pref="extensions.better_url.autoSizeSearchBox" type="bool" title="Automatically collapse search box when inactive" />
-
-  <setting pref="extensions.better_url.allowURLBarFormatting" type="bool" title="Disable domain highlighting in the URL bar" inverted="true">
-    Makes the entire URL uniformly visible
-  </setting>
+	<setting pref="extensions.better_url.allowURLBarFormatting"
+		type="bool" title="Disable domain highlighting in the URL bar"
+		inverted="true">
+		Makes the entire URL uniformly visible
+	</setting>
 
 </box>

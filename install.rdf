@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<r:RDF xmlns="http://www.mozilla.org/2004/em-rdf#"
-       xmlns:r="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <r:Description about="urn:mozilla:install-manifest">
-    <creator>Siddhartha Dugar</creator>
-    <id>better_url@sdrocking.com</id>
-    <name>Better URL Bar</name>
-    <description>Makes the URL bar and Search bar fonts bigger and more readable.</description>
-    <homepageURL>https://addons.mozilla.org/en-US/firefox/addon/better-url/</homepageURL>
-    <version>3.1</version>
+<r:RDF xmlns="http://www.mozilla.org/2004/em-rdf#" xmlns:r="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<r:Description about="urn:mozilla:install-manifest">
+		<creator>Siddhartha Dugar</creator>
+		<id>better_url@sdrocking.com</id>
+		<name>Better URL Bar</name>
+		<description>Makes the URL bar and Search bar fonts bigger and more
+			readable.
+		</description>
+		<homepageURL>https://addons.mozilla.org/en-US/firefox/addon/better-url/
+		</homepageURL>
+		<version>4</version>
 
-    <bootstrap>true</bootstrap>
-    <type>2</type>
-    <optionsType>2</optionsType>
-    
-    <!-- Firefox -->
-    <targetApplication>
-      <r:Description>
-        <id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</id>
-        <minVersion>7.0</minVersion>
-        <maxVersion>15.0a1</maxVersion>
-      </r:Description>
-    </targetApplication>
-  </r:Description>
+		<bootstrap>true</bootstrap>
+		<type>2</type>
+		<optionsType>2</optionsType>
+
+		<!-- Firefox -->
+		<targetApplication>
+			<r:Description>
+				<id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</id>
+				<minVersion>7.0</minVersion>
+				<maxVersion>17.0a1</maxVersion>
+			</r:Description>
+		</targetApplication>
+	</r:Description>
 </r:RDF>

@@ -59,7 +59,6 @@ function pref(key) {
 pref.root = "extensions.better_url.";
 pref.defaults = {
   increaseFonts: true,
-  hideIdentityLabels: true,
   allowURLBarFormatting: false,
   autoSizeSearchBox: false,
   loggingEnabled: false
