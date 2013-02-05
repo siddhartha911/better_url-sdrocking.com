@@ -12,5 +12,14 @@
 		inverted="true">
 		Makes the entire URL uniformly visible
 	</setting>
-
+	
+	<setting pref="extensions.better_url.navBarSpacing" type="radio"
+		title="Set padding for navigation toolbar buttons">
+		<radiogroup>
+			<radio value="adaptive" label="Adaptive" />
+			<radio value="reduced" label="Reduced" />
+			<radio value="minimal" label="Minimal" />
+			<radio value="default" label="Default" />
+		</radiogroup>
+	</setting>
 </box>

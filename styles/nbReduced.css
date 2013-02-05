@@ -1,0 +1,37 @@
+/*Reduce vertical padding of buttons*/
+#navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1,
+#navigator-toolbox[iconsize=large] > #nav-bar:not([currentset*="unified-back-forward-button,urlbar-container"]) #forward-button {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+/*Reduce horizontal padding of buttons*/
+#navigator-toolbox[iconsize=large] > #nav-bar > .toolbarbutton-1 {
+  padding-left: 1px !important;
+  padding-right: 1px !important;
+}
+
+/*Reduce horizontal padding of buttons icons*/
+#navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1:not([type=menu]) > .toolbarbutton-icon,
+#navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1[type=menu]:not(#back-button):not(#forward-button):not(#feed-button),
+#navigator-toolbox[iconsize=large] > #nav-bar #feed-button > .toolbarbutton-icon,
+#navigator-toolbox[iconsize=large] > #nav-bar:not([currentset*="unified-back-forward-button,urlbar-container"]) #back-button .toolbarbutton-icon,
+#navigator-toolbox[iconsize=large] > #nav-bar:not([currentset*="unified-back-forward-button,urlbar-container"]) #forward-button > .toolbarbutton-icon {
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+}
+
+/*Reduce padding and margins for buttons of [type=menu] with dropmarkers*/
+#navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1[type=menu]:not(#back-button):not(#forward-button):not(#feed-button) > .toolbarbutton-icon {
+  padding-left: 2px !important;
+  padding-right: 11px !important;
+}
+
+#navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1[type=menu]:not(#back-button):not(#forward-button):not(#feed-button) > .toolbarbutton-menu-dropmarker {
+  -moz-margin-start: -12px !important;
+}
+
+/*Handle conditional back-foward button*/
+#navigator-toolbox[iconsize=large] > #nav-bar[currentset*="unified-back-forward-button,urlbar-container"] #back-button .toolbarbutton-icon {
+  padding: 3.5px !important;
+}

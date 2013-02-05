@@ -1,0 +1,75 @@
+/*Reduce vertical padding of buttons*/
+#navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1,
+#navigator-toolbox[iconsize=large] > #nav-bar:not([currentset*="unified-back-forward-button,urlbar-container"]) #forward-button {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+/*Reduce horizontal padding of buttons*/
+#navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+/*Reduce horizontal padding of buttons icons*/
+#navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1:not([type=menu]) > .toolbarbutton-icon,
+#navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1[type=menu]:not(#back-button):not(#forward-button):not(#feed-button),
+#navigator-toolbox[iconsize=large] > #nav-bar #feed-button > .toolbarbutton-icon,
+#navigator-toolbox[iconsize=large] > #nav-bar:not([currentset*="unified-back-forward-button,urlbar-container"]) #back-button .toolbarbutton-icon,
+#navigator-toolbox[iconsize=large] > #nav-bar:not([currentset*="unified-back-forward-button,urlbar-container"]) #forward-button > .toolbarbutton-icon {
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+}
+
+/*Reduce padding and margins for buttons of [type=menu] with dropmarkers*/
+#navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1[type=menu]:not(#back-button):not(#forward-button):not(#feed-button) > .toolbarbutton-icon {
+  padding-left: 2px !important;
+  padding-right: 11px !important;
+}
+
+#navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1[type=menu]:not(#back-button):not(#forward-button):not(#feed-button) > .toolbarbutton-menu-dropmarker {
+  -moz-margin-start: -12px !important;
+}
+
+/*Handle conditional back-foward button*/
+#navigator-toolbox[iconsize=large] > #nav-bar[currentset*="unified-back-forward-button,urlbar-container"] #back-button {
+  border-radius: 2px !important;
+  background-color: hsla(210,48%,90%,1) !important;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1)) !important;
+}
+
+#navigator-toolbox[iconsize=large] > #nav-bar[currentset*="unified-back-forward-button,urlbar-container"] #back-button .toolbarbutton-icon {
+  padding: 2px !important;
+  -moz-image-region: rect(0px, 18px, 18px, 0px) !important;
+  border-radius: 2px 0 0 2px !important;
+  border: 1px solid !important;
+  border-color: hsla(210,54%,20%,.13) hsla(210,54%,20%,.16) hsla(210,54%,20%,.2) !important;
+  box-shadow: 0 1px hsla(0,0%,100%,0) inset,
+              0 1px hsla(210,54%,20%,0),
+              0 0 2px hsla(210,54%,20%,0) !important;
+}
+
+#navigator-toolbox[iconsize=large] > #nav-bar[currentset*="unified-back-forward-button,urlbar-container"] #back-button:not([open]):not(:active):hover .toolbarbutton-icon {
+  background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.1)) !important;
+  border-color: hsla(210,54%,20%,.15) hsla(210,54%,20%,.2) hsla(210,54%,20%,.25) !important;
+  box-shadow: 0 1px hsla(0,0%,100%,.3) inset,
+              0 1px hsla(210,54%,20%,.03),
+              0 0 2px hsla(210,54%,20%,.1) !important;
+}
+
+#navigator-toolbox[iconsize=large] > #nav-bar[currentset*="unified-back-forward-button,urlbar-container"] #back-button:hover:active:not([disabled]) > .toolbarbutton-icon,
+#navigator-toolbox[iconsize=large] > #nav-bar[currentset*="unified-back-forward-button,urlbar-container"] #back-button[open] > .toolbarbutton-icon {
+  background-image: linear-gradient(hsla(0,0%,100%,.6),hsla(0,0%,100%,.1)) !important;
+  background-color: hsla(210,54%,20%,.15) !important;
+  border-color: hsla(210,54%,20%,.3) hsla(210,54%,20%,.35) hsla(210,54%,20%,.4) !important;
+  box-shadow: 0 1px 1px hsla(210,54%,20%,.1) inset,
+              0 0 1px hsla(210,54%,20%,.2) inset,
+              0 1px 0 hsla(210,54%,20%,0),
+              0 0 2px hsla(210,54%,20%,0) !important;
+}
+
+/*Reduce search bar splitter width*/
+#urlbar-search-splitter {
+  padding: 0 !important;
+  margin: 0 -3px !important;
+}

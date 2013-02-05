@@ -9,7 +9,7 @@
 		</description>
 		<homepageURL>https://addons.mozilla.org/en-US/firefox/addon/better-url/
 		</homepageURL>
-		<version>4</version>
+		<version>5</version>
 
 		<bootstrap>true</bootstrap>
 		<type>2</type>
@@ -20,7 +20,7 @@
 			<r:Description>
 				<id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</id>
 				<minVersion>7.0</minVersion>
-				<maxVersion>17.0a1</maxVersion>
+				<maxVersion>21.0a1</maxVersion>
 			</r:Description>
 		</targetApplication>
 	</r:Description>

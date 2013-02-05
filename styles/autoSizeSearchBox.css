@@ -5,7 +5,7 @@
 #search-container .searchbar-textbox {
 	min-width: 60px !important;
 	overflow: hidden !important;
-	-moz-transition: min-width 100ms 100ms ease-out !important;
+	transition: min-width 100ms 100ms ease-out !important;
 }
 
 #search-container:hover .searchbar-textbox,
@@ -14,11 +14,11 @@
 }
 
 #search-container:hover .searchbar-textbox {
-	-moz-transition-delay: 300ms !important;
+	transition-delay: 300ms !important;
 }
 
 #search-container .searchbar-textbox[focused] {
-	-moz-transition: none !important;
+	transition: none !important;
 }
 
 #navigator-toolbox:not([customizing]) #search-container {
@@ -48,7 +48,7 @@
 
 #search-container .searchbar-engine-button {
 	margin-left: 0 !important;
-	-moz-transition: margin 100ms !important;
+	transition: margin 100ms !important;
 }
 
 #navigator-toolbox:not([customizing]) #search-container:not(:hover) .searchbar-textbox:not([focused]) .searchbar-engine-button {
@@ -56,5 +56,5 @@
 }
 
 #search-container:hover .searchbar-engine-button {
-	-moz-transition-delay: 300ms !important;
+	transition-delay: 300ms !important;
 }
