@@ -2,17 +2,20 @@
 <box xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 	<setting pref="extensions.better_url.increaseFonts" type="bool"
-		title="Increase font size for the URL bar and the Search box" />
+		title="Increase font size for the URL bar and the Search box">
+		Adaptively increase font size for more readability
+	</setting>
 
 	<setting pref="extensions.better_url.autoSizeSearchBox" type="bool"
-		title="Automatically collapse search box when inactive" />
-
-	<setting pref="extensions.better_url.allowURLBarFormatting"
-		type="bool" title="Disable domain highlighting in the URL bar"
-		inverted="true">
-		Makes the entire URL uniformly visible
+		title="Automatically collapse search box when inactive">
+		Use to fit more content in the navigation toolbar
 	</setting>
-	
+
+	<setting pref="browser.urlbar.formatting.enabled" type="bool"
+		title="Allow domain highlighting in the URL bar">
+		Un-tick to make the URL uniformly visible
+	</setting>
+
 	<setting pref="extensions.better_url.navBarSpacing" type="radio"
 		title="Set padding for navigation toolbar buttons">
 		<radiogroup>
@@ -21,5 +24,6 @@
 			<radio value="minimal" label="Minimal" />
 			<radio value="default" label="Default" />
 		</radiogroup>
+		Use with Large icon mode only
 	</setting>
 </box>

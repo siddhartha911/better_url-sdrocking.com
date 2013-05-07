@@ -11,11 +11,22 @@
   padding-right: 1px !important;
 }
 
+/*Handle new bookmarks-menu-button*/
+#nav-bar > #bookmarks-menu-button > .toolbarbutton-menubutton-button {
+  padding: 2px 0 2px 1px !important;
+}
+
+#nav-bar > #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker {
+  padding: 2px 1px 2px 0 !important;
+}
+
 /*Reduce horizontal padding of buttons icons*/
 #navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1:not([type=menu]) > .toolbarbutton-icon,
 #navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1[type=menu]:not(#back-button):not(#forward-button):not(#feed-button),
 #navigator-toolbox[iconsize=large] > #nav-bar #feed-button > .toolbarbutton-icon,
-#navigator-toolbox[iconsize=large] > #nav-bar:not([currentset*="unified-back-forward-button,urlbar-container"]) #back-button .toolbarbutton-icon,
+#navigator-toolbox[iconsize=large] > #nav-bar #bookmarks-menu-button > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+#navigator-toolbox[iconsize=large] > #nav-bar #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon,
+#navigator-toolbox[iconsize=large] > #nav-bar:not([currentset*="unified-back-forward-button,urlbar-container"]) #back-button > .toolbarbutton-icon,
 #navigator-toolbox[iconsize=large] > #nav-bar:not([currentset*="unified-back-forward-button,urlbar-container"]) #forward-button > .toolbarbutton-icon {
   padding-left: 2px !important;
   padding-right: 2px !important;
@@ -31,7 +42,7 @@
   -moz-margin-start: -12px !important;
 }
 
-/*Handle conditional back-foward button*/
+/*Handle conditional back-forward button*/
 #navigator-toolbox[iconsize=large] > #nav-bar[currentset*="unified-back-forward-button,urlbar-container"] #back-button .toolbarbutton-icon {
   padding: 3.5px !important;
 }

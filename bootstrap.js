@@ -1,13 +1,11 @@
-const Cc = Components.classes, Ci = Components.interfaces, Cu = Components.utils;
+var Cc = Components.classes, Ci = Components.interfaces, Cu = Components.utils;
 Cu.import("resource://gre/modules/Services.jsm");
 
-const URLBAR_FORMATTING_PREF = "browser.urlbar.formatting.enabled";
-const REDUCED_URL = "styles/nbReduced.css", ADAPTIVE_URL = "styles/nbAdaptive.css", MINIMAL_URL = "styles/nbMinimal.css";
+var REDUCED_URL = "styles/nbReduced.css", ADAPTIVE_URL = "styles/nbAdaptive.css", MINIMAL_URL = "styles/nbMinimal.css";
 
 var PREF_ROOT = "extensions.better_url.";
 var PREF_DEFAULTS = {
 	increaseFonts : true,
-	allowURLBarFormatting : false,
 	autoSizeSearchBox : false,
 	navBarSpacing : "adaptive",
 	loggingEnabled : false
@@ -27,25 +25,7 @@ include("scripts/helpers.js");
 
 initDefaultPrefs(PREF_ROOT, PREF_DEFAULTS, true);
 
-var domainHighlight_o, navBarSpacingURL_current;
-
-function setURLBarFormattingPref() {
-	domainHighlight_o = Services.prefs.getBoolPref(URLBAR_FORMATTING_PREF);
-
-	function assignPrefValue() {
-		Services.prefs.setBoolPref(URLBAR_FORMATTING_PREF,
-				prefValue("allowURLBarFormatting"));
-		printToLog(URLBAR_FORMATTING_PREF + " is set to "
-				+ prefValue("allowURLBarFormatting"));
-	}
-
-	assignPrefValue();
-	prefObserve([ "allowURLBarFormatting" ], assignPrefValue);
-
-	unload(function() {
-		Services.prefs.setBoolPref(URLBAR_FORMATTING_PREF, domainHighlight_o);
-	});
-}
+var navBarSpacingURL_current;
 
 function navBarSpacingValueToUrl(prefName) {
 	var nbValue = prefValue(prefName).toLowerCase();
@@ -80,16 +60,23 @@ function loadAndHandleNBSpacing(prefName) {
 
 function startup(data, reason) {
 	initAddonNameAsync(data);
-	loadAndObserve("increaseFonts", "styles/increaseFonts.css");
-	loadAndObserve("autoSizeSearchBox", "styles/autoSizeSearchBox.css");
-	setURLBarFormattingPref();
+
+	loadSheet("styles/stylesheet.css");
+	unload(function() {
+		unloadSheet("styles/stylesheet.css");
+	});
+
+	loadObsPrefWCallback("increaseFonts", "nav-bar");
+	loadObsPrefWCallback("autoSizeSearchBox", "nav-bar");
 	loadAndHandleNBSpacing("navBarSpacing");
 }
 
 function shutdown(data, reason) {
-	if (reason == APP_SHUTDOWN) return;
-	unload();
+	if (reason != APP_SHUTDOWN)
+		unload();
 }
 
-function install() {}
-function uninstall() {}
+function install() {
+}
+function uninstall() {
+}

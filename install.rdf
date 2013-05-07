@@ -4,12 +4,10 @@
 		<creator>Siddhartha Dugar</creator>
 		<id>better_url@sdrocking.com</id>
 		<name>Better URL Bar</name>
-		<description>Makes the URL bar and Search bar fonts bigger and more
-			readable.
-		</description>
+		<description>Makes the URL bar and Search bar more readable, and the navigation-toolbar compact.</description>
 		<homepageURL>https://addons.mozilla.org/en-US/firefox/addon/better-url/
 		</homepageURL>
-		<version>5</version>
+		<version>6</version>
 
 		<bootstrap>true</bootstrap>
 		<type>2</type>

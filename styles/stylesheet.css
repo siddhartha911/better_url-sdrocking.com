@@ -1,0 +1,71 @@
+/* Increase URL bar and Search bar fonts */
+@media all and (min-width: 600px) {
+	#nav-bar[increaseFonts=true] .urlbar-input-box,
+	#nav-bar[increaseFonts=true] .searchbar-textbox {
+		font-size: 13.5px !important;
+	}
+}
+
+@media all and (min-width: 1100px) {
+	#nav-bar[increaseFonts=true] .urlbar-input-box,
+	#nav-bar[increaseFonts=true] .searchbar-textbox {
+		font-size: 14.5px !important;
+	}
+}
+
+/* Auto size search box */
+/* Modified from style "Search bar - Auto-size" by banthaz */
+#nav-bar[autoSizeSearchBox=true] #search-container .searchbar-textbox {
+	min-width: 60px !important;
+	overflow: hidden !important;
+	transition: min-width 100ms 100ms ease-out !important;
+}
+
+#nav-bar[autoSizeSearchBox=true] #search-container:hover .searchbar-textbox,
+#nav-bar[autoSizeSearchBox=true] #search-container .searchbar-textbox[focused] {
+	min-width: 250px !important;
+}
+
+#nav-bar[autoSizeSearchBox=true] #search-container:hover .searchbar-textbox {
+	transition-delay: 300ms !important;
+}
+
+#nav-bar[autoSizeSearchBox=true] #search-container .searchbar-textbox[focused] {
+	transition: none !important;
+}
+
+#navigator-toolbox:not([customizing]) #nav-bar[autoSizeSearchBox=true] #search-container {
+	max-width: 0 !important;
+}
+
+#nav-bar[autoSizeSearchBox=true] #urlbar-search-splitter {
+	display: none !important;
+}
+
+/* Modified from style "Unified Url+Search bar [hover Splitter]" by frog*/
+#nav-bar[autoSizeSearchBox=true] #urlbar {
+	margin-right: 0 !important;
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+
+#nav-bar[autoSizeSearchBox=true] #urlbar-search-splitter:not(:hover) + #search-container .searchbar-textbox {
+	margin-left: 0 !important;
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	border-left-width: 0 !important;
+}
+
+/* Style "Auto-hide Search Engine Button" by sdrocking */
+#nav-bar[autoSizeSearchBox=true] #search-container .searchbar-engine-button {
+	margin-left: 0 !important;
+	transition: margin 100ms !important;
+}
+
+#navigator-toolbox:not([customizing]) #nav-bar[autoSizeSearchBox=true] #search-container:not(:hover) .searchbar-textbox:not([focused]) .searchbar-engine-button {
+	margin-left: -32px !important;
+}
+
+#nav-bar[autoSizeSearchBox=true] #search-container:hover .searchbar-engine-button {
+	transition-delay: 300ms !important;
+}

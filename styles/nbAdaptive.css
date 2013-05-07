@@ -11,11 +11,22 @@
   padding-right: 1px !important;
 }
 
+/*Handle new bookmarks-menu-button*/
+#navigator-toolbox[iconsize=large] > #nav-bar > #bookmarks-menu-button > .toolbarbutton-menubutton-button {
+  padding: 2px 0 2px 1px !important;
+}
+
+#navigator-toolbox[iconsize=large] > #nav-bar > #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker {
+  padding: 2px 1px 2px 0 !important;
+}
+
 /*Reduce horizontal padding of buttons icons*/
 #navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1:not([type=menu]) > .toolbarbutton-icon,
 #navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1[type=menu]:not(#back-button):not(#forward-button):not(#feed-button),
 #navigator-toolbox[iconsize=large] > #nav-bar #feed-button > .toolbarbutton-icon,
-#navigator-toolbox[iconsize=large] > #nav-bar:not([currentset*="unified-back-forward-button,urlbar-container"]) #back-button .toolbarbutton-icon,
+#navigator-toolbox[iconsize=large] > #nav-bar #bookmarks-menu-button > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+#navigator-toolbox[iconsize=large] > #nav-bar > #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon,
+#navigator-toolbox[iconsize=large] > #nav-bar:not([currentset*="unified-back-forward-button,urlbar-container"]) #back-button > .toolbarbutton-icon,
 #navigator-toolbox[iconsize=large] > #nav-bar:not([currentset*="unified-back-forward-button,urlbar-container"]) #forward-button > .toolbarbutton-icon {
   padding-left: 2px !important;
   padding-right: 2px !important;
@@ -31,14 +42,16 @@
   -moz-margin-start: -12px !important;
 }
 
-/*Handle conditional back-foward button*/
+/*Handle conditional back-forward button*/
 #navigator-toolbox[iconsize=large] > #nav-bar[currentset*="unified-back-forward-button,urlbar-container"] #back-button .toolbarbutton-icon {
   padding: 3.5px !important;
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 600px) {
   /*Further reduce horizontal padding of buttons*/
-  #navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1 {
+  #navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1,
+  #navigator-toolbox[iconsize=large] > #nav-bar > #bookmarks-menu-button > .toolbarbutton-menubutton-button,
+  #navigator-toolbox[iconsize=large] > #nav-bar > #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker {
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
@@ -47,7 +60,9 @@
   #navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1:not([type=menu]) > .toolbarbutton-icon,
   #navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1[type=menu]:not(#back-button):not(#forward-button):not(#feed-button),
   #navigator-toolbox[iconsize=large] > #nav-bar #feed-button > .toolbarbutton-icon,
-  #navigator-toolbox[iconsize=large] > #nav-bar:not([currentset*="unified-back-forward-button,urlbar-container"]) #back-button .toolbarbutton-icon,
+  #navigator-toolbox[iconsize=large] > #nav-bar #bookmarks-menu-button > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+  #navigator-toolbox[iconsize=large] > #nav-bar #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon,
+  #navigator-toolbox[iconsize=large] > #nav-bar:not([currentset*="unified-back-forward-button,urlbar-container"]) #back-button > .toolbarbutton-icon,
   #navigator-toolbox[iconsize=large] > #nav-bar:not([currentset*="unified-back-forward-button,urlbar-container"]) #forward-button > .toolbarbutton-icon {
     padding-left: 1px !important;
     padding-right: 1px !important;
@@ -60,17 +75,19 @@
   }
 }
 
-@media all and (max-height: 500px) {
+@media all and (max-height: 600px) {
   /*Further reduce vertical padding of buttons*/
   #navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1,
+  #navigator-toolbox[iconsize=large] > #nav-bar > #bookmarks-menu-button > .toolbarbutton-menubutton-button,
+  #navigator-toolbox[iconsize=large] > #nav-bar > #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker,
   #navigator-toolbox[iconsize=large] > #nav-bar:not([currentset*="unified-back-forward-button,urlbar-container"]) #forward-button {
     padding-top: 0px !important;
     padding-bottom: 0px !important;
   }
 }
 
-@media all and (max-width: 700px), (max-height: 500px) {
-  /*Handle conditional back-foward button*/
+@media all and (max-width: 600px), (max-height: 600px) {
+  /*Handle conditional back-forward button*/
   #navigator-toolbox[iconsize=large] > #nav-bar[currentset*="unified-back-forward-button,urlbar-container"] #back-button {
     border-radius: 2px !important;
     background-color: hsla(210,48%,90%,1) !important;
